@@ -1,0 +1,29 @@
+{
+  "name": "tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "without_express.js",
+  "scripts": {
+    "start": "nodemon server.js --ignore client",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server" : "nodemon index.js --ignore client",
+    "distribute": "npm i && prisma generate && pm2 start server.js --name <project-back> -i max"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "@prisma/client": "^3.11.0",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.15",
+    "prisma": "^3.11.0",
+    "pm2": "^5.1.2"
+  }
+}
